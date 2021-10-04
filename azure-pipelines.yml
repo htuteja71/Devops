@@ -1,0 +1,24 @@
+pool:
+  vmImage: 'Ubuntu-16.04'
+
+steps:
+- task: terraform@0
+  inputs:
+    command: 'init'
+    providerAzureConnectedServiceName: 'MTC Denver Sandbox'
+    backendAzureProviderStorageAccountName: 'mtcdenterraformsandbox'
+  displayName: Terraform Init
+    
+- task: terraform@0
+  inputs:
+    command: 'plan'
+    providerAzureConnectedServiceName: 'MTC Denver Sandbox'
+    args: -var=environment=demo -out=tfplan.out
+  displayName: Terraform Plan
+
+- task: terraform@0
+  inputs:
+    command: 'apply'
+    providerAzureConnectedServiceName: 'MTC Denver Sandbox'
+    args: tfplan.out
+  displayName: Terraform Apply
