@@ -2,11 +2,12 @@ pipeline{
     agent any
 	environment {
 		ARM_CLIENT_ID = "23101c39-455f-4b5f-9b33-ab76d68b4f7c"
-		ARM_CLIENT_SECRET = "a76d18c1-9b73-43de-ac01-8e9856d6da32"
+		ARM_CLIENT_SECRET = "PFt7Q~qs~YA3iZ11aHNugEmUB4fbhbPZ2v9hk"
 		ARM_TENANT_ID = "fc4cf7ec-2b33-4ccb-bf4f-dfdf72a2e9c6"
 		AZURE_CLIENT_ID = "23101c39-455f-4b5f-9b33-ab76d68b4f7c"
-		AZURE_CLIENT_SECRET = "a76d18c1-9b73-43de-ac01-8e9856d6da32"
+		AZURE_CLIENT_SECRET = "PFt7Q~qs~YA3iZ11aHNugEmUB4fbhbPZ2v9hk"
 		AZURE_TENANT_ID = "fc4cf7ec-2b33-4ccb-bf4f-dfdf72a2e9c6"
+
 
 	}
     stages{
